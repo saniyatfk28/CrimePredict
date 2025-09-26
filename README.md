@@ -1,5 +1,6 @@
 # CrimePredict
 crimepredict/
+
 ├── data/ (with sample CSV)
 
 ├── crimepredict/ (Django settings)
