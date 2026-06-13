@@ -1,0 +1,32 @@
+[
+  {
+    "incident_district": "Dhaka",
+    "crime_type": "theft",
+    "incident_place": "Gulshan",
+    "date": "2024-08-12"
+  },
+  {
+    "incident_district": "Dhaka",
+    "crime_type": "robbery",
+    "incident_place": "Motijheel",
+    "date": "2024-08-13"
+  },
+  {
+    "incident_district": "Chittagong",
+    "crime_type": "assault",
+    "incident_place": "Pahartali",
+    "date": "2024-08-10"
+  },
+  {
+    "incident_district": "Sylhet",
+    "crime_type": "murder",
+    "incident_place": "Kazirgaon",
+    "date": "2024-08-09"
+  },
+  {
+    "incident_district": "Khulna",
+    "crime_type": "rape",
+    "incident_place": "Daulatpur",
+    "date": "2024-08-05"
+  }
+]
