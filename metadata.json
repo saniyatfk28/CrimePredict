@@ -1,0 +1,5 @@
+{
+  "name": "CrimePredict",
+  "description": "A comprehensive role-based crime prediction and monitoring dashboard featuring distinct interfaces for Administrators, Law Enforcement, and Public Users.",
+  "requestFramePermissions": []
+}
