@@ -1,0 +1,66 @@
+
+{% extends 'base.html' %}
+{% block title %}Citizen Portal{% endblock %}
+{% block content %}
+<div className="container py-4">
+    <div className="text-center mb-5">
+        <h2 className="fw-bold text-success">Neighborhood Safety Transparency</h2>
+        <p className="text-muted">Data-driven insights for a safer community</p>
+    </div>
+
+    <div className="row g-4">
+        <div className="col-lg-4">
+            <div className="card dashboard-card h-100 bg-success text-white">
+                <div className="card-body p-4">
+                    <h5 className="fw-bold mb-3"><i className="fas fa-info-circle me-2"></i>Your Safety Briefing</h5>
+                    <p className="small opacity-90">Based on recent data in your district:</p>
+                    <ul className="small space-y-2 opacity-90">
+                        <li>Crime is 15% lower in areas with >70% literacy.</li>
+                        <li>Incidents peak during "Night" hours - stay vigilant.</li>
+                        <li>High temperatures correlate with increased reporting.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div className="col-lg-8">
+            <div className="card dashboard-card">
+                <div className="card-header bg-white py-3">
+                    <h5 className="fw-bold m-0 text-success">Safety Index by Location</h5>
+                </div>
+                <div className="card-body p-0">
+                    <div className="table-responsive">
+                        <table className="table table-hover mb-0">
+                            <thead>
+                                <tr className="table-light">
+                                    <th>Place</th>
+                                    <th>Literacy Rate</th>
+                                    <th>Recorded Incidents</th>
+                                    <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for row in safety_data %}
+                                <tr>
+                                    <td className="text-capitalize">{{ row.incident_place }}</td>
+                                    <td>{{ row.literacy_rate }}%</td>
+                                    <td>{{ row.count }}</td>
+                                    <td>
+                                        {% if row.count > 5 %}
+                                        <span className="text-danger fw-bold">Watch</span>
+                                        {% else %}
+                                        <span className="text-success fw-bold">Secure</span>
+                                        {% endif %}
+                                    </td>
+                                </tr>
+                                {% empty %}
+                                <tr><td colspan="4" className="text-center py-5 text-muted italic">Gathering local stats...</td></tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
