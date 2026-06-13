@@ -91,7 +91,6 @@ Common dev flow:
 ## Environment Variables
 - **REDIS_URL** (optional): enables Redis for cache/channel layers
 - **EMAIL_MODE** (in `backend/backend/settings.py`): `smtp` or `console`
-- **GEMINI_API_KEY** (frontend `.env.local`, if AI features are enabled)
 
 ## Repository Structure (high level)
 - `backend/`
