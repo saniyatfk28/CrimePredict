@@ -63,10 +63,7 @@ This project is a web application that enables:
 ```bash
 npm install
 ```
-If your app uses the Gemini-based AI flow (the repo references `GEMINI_API_KEY` in `.env.local`), set it:
-```bash
-# create/edit .env.local
-GEMINI_API_KEY=your_key_here
+
 ```
 Run the Vite dev server:
 ```bash
