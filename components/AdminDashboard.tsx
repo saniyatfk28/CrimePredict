@@ -277,41 +277,135 @@ const AdminDashboard: React.FC = () => {
           </div>
         )}
 
-        {widgets.find(w => w.id === 'map-control')?.isVisible && (
-          <div className="col-12">
-            <div className="card dashboard-card">
-              <div className="card-header bg-white py-3">
-                 <h5 className="mb-0 fw-bold"><i className="fas fa-globe-americas me-2 text-info"></i> Global Incident Map Control</h5>
-              </div>
-              <div className="card-body p-0">
-                <div className="w-100">
-                  <h4 className="fw-bold">Global Incident Map (External Visualization)</h4>
+          {widgets.find(w => w.id === 'map-control')?.isVisible && (
 
-                  <iframe
-                    src="https://globalthreatmap.up.railway.app/"
-                    width="100%"
-                    height="400px"
-                    style={{ border: "none", borderRadius: "8px" }}
-                    title="Global Threat Map"
-                  />
+            <div className="col-12">
 
-                  <p className="text-muted mt-2">
-                    Data visualization provided by external GIS service.
-                  </p>
+              <div className="card dashboard-card">
 
-                  <div className="mt-3 small text-muted">
-                    <div>
-                      Credit: <a href="https://github.com/unicodeveloper/globalthreatmap" target="_blank" rel="noreferrer">github.com/unicodeveloper/globalthreatmap</a>
-                    </div>
-                    <div>
-                      Website: <a href="https://globalthreatmap.up.railway.app/" target="_blank" rel="noreferrer">https://globalthreatmap.up.railway.app/</a>
-                    </div>
-                  </div>
+                <div className="card-header bg-white py-3">
+
+                  <h5 className="mb-0 fw-bold">
+
+                    <i className="fas fa-globe-americas me-2 text-info"></i>
+
+                    Global Incident Map Control
+
+                  </h5>
+
                 </div>
+
+
+
+                <div className="card-body">
+
+                  <div className="text-center py-5">
+
+
+
+                    <i className="fas fa-map-marked-alt fa-4x text-info mb-4"></i>
+
+
+
+                    <h4 className="fw-bold">
+
+                      Global Incident Intelligence Dashboard
+
+                    </h4>
+
+
+
+                    <p className="text-muted mx-auto" style={{ maxWidth: "700px" }}>
+
+                      This module provides access to an external global conflict and
+
+                      incident monitoring dashboard. Due to the provider's security
+
+                      policies, the dashboard cannot be embedded directly within
+
+                      CrimePredict and must be opened in a separate tab.
+
+                    </p>
+
+
+
+                    <a
+
+                      href="https://war-monitor.com/dashboard"
+
+                      target="_blank"
+
+                      rel="noreferrer"
+
+                      className="btn btn-info btn-lg mt-2"
+
+                    >
+
+                      <i className="fas fa-external-link-alt me-2"></i>
+
+                      Open Dashboard
+
+                    </a>
+
+
+
+                    <div className="mt-4 small text-muted">
+
+                      <div>
+
+                        <strong>Source:</strong>{" "}
+
+                        <a
+
+                          href="https://war-monitor.com/"
+
+                          target="_blank"
+
+                          rel="noreferrer"
+
+                        >
+
+                          War Monitor
+
+                        </a>
+
+                      </div>
+
+
+
+                      <div>
+
+                        <strong>Dashboard:</strong>{" "}
+
+                        <a
+
+                          href="https://war-monitor.com/dashboard"
+
+                          target="_blank"
+
+                          rel="noreferrer"
+
+                        >
+
+                          war-monitor.com/dashboard
+
+                        </a>
+
+                      </div>
+
+                    </div>
+
+
+
+                  </div>
+
+                </div>
+
               </div>
+
             </div>
-          </div>
-        )}
+
+          )}
       </div>
     </div>
   );
