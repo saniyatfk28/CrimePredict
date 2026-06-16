@@ -167,7 +167,7 @@ const TrendChart: React.FC<TrendChartProps> = ({ series, forecastPoints = 7 }) =
 
   return (
     <div style={{ overflowX: 'auto' }}>
-      <svg width={width} height={height}>
+      <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height}>
         {/* background */}
         <rect x={0} y={0} width="100%" height="100%" fill="transparent" />
 
@@ -254,5 +254,8 @@ const TrendChart: React.FC<TrendChartProps> = ({ series, forecastPoints = 7 }) =
     </div>
   );
 };
+
+export default TrendChart;
+
 
 export default TrendChart;
