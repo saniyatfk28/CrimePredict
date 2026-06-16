@@ -620,7 +620,7 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
 
         <div className="card-body p-4">
           {/* Crime Types Tab */}
-          {activeTab === 'type' && (
+          <div id="pdf-section-crime-types" style={activeTab === 'type' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
               <h6 className="fw-bold mb-3">Crime Incidents by Type</h6>
               <div style={{ overflowX: 'auto' }}>
@@ -661,10 +661,10 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 </table>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Divisions Tab */}
-          {activeTab === 'city' && (
+          <div id="pdf-section-cities" style={activeTab === 'city' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
               <h6 className="fw-bold mb-3">Crime Incidents by City</h6>
               <div style={{ overflowX: 'auto' }}>
@@ -724,10 +724,10 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 </table>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Time of Day Tab */}
-          {activeTab === 'time' && (
+          <div id="pdf-section-time-of-day" style={activeTab === 'time' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
               <h6 className="fw-bold mb-3">Crime Incidents by Time of Day</h6>
               <div style={{ overflowX: 'auto' }}>
@@ -756,10 +756,10 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 </table>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Seasons Tab */}
-          {activeTab === 'season' && (
+          <div id="pdf-section-seasons" style={activeTab === 'season' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
               <h6 className="fw-bold mb-3">Crime Incidents by Season</h6>
               <div style={{ overflowX: 'auto' }}>
@@ -788,12 +788,12 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 </table>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Trend Tab */}
-          {activeTab === 'trend' && (
+          <div id="pdf-section-trend" style={activeTab === 'trend' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
-              <h6 className="fw-bold mb-3">Crime Trend ({timeSeries.length > 0 && timeSeries[0].x.startsWith('month-') ? 'Monthly (month-only)' : (aggregation === 'day' ? 'Daily' : 'Monthly')})</h6>
+                <h6 className="fw-bold mb-3">Crime Trend ({timeSeries.length > 0 && timeSeries[0].x.startsWith('month-') ? 'Monthly (month-only)' : (aggregation === 'day' ? 'Daily' : 'Monthly')})</h6>
               {timeSeries.length <= 1 ? (
                 <div className="alert alert-info">Not enough time-series data available for trend visualization.</div>
               ) : (
@@ -805,10 +805,10 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 </>
               )}
             </div>
-          )}
+          </div>
 
           {/* Report Tab */}
-          {activeTab === 'report' && (
+          <div id="pdf-section-report" style={activeTab === 'report' ? { display: 'block' } : { position: 'absolute', top: -9999, left: -9999, visibility: 'hidden', width: '100%' }}>
             <div>
                 <CrimeReport
                 total={stats.totalCrimes}
@@ -817,7 +817,7 @@ const FilteredCrimeStats: React.FC<FilteredCrimeStatsProps> = ({ districtFilter,
                 trendSlope={trendSlope}
               />
             </div>
-          )}
+          </div>
         </div>
       </div>
     </div>
